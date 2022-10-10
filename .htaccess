@@ -18,3 +18,9 @@
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
+<Directory /var/www/html/>
+     Options Indexes FollowSymLinks MultiViews
+     AllowOverride All
+     Order allow,deny
+     allow from all
+</Directory>
